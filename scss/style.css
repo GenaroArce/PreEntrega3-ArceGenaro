@@ -1,0 +1,650 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Sixtyfour&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Sixtyfour&display=swap");
+main {
+  background-color: #1e6ab7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#top-section {
+  background-image: url("https://img.freepik.com/foto-gratis/imagen-par-pugs-sobre-banner-fondo-azul-degradado_125540-3911.jpg?w=1380&t=st=1708468607~exp=1708469207~hmac=e64c92a1da288c96cceb084c95e753c65d699b128b1af78969d3e8c13d4b6256");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 300px 0;
+  margin-bottom: 100px;
+}
+#top-section .custom-button {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 17px;
+  padding: 1em 2.7em;
+  font-weight: 500;
+  background: #1f2937;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+#top-section .custom-button:hover {
+  color: white;
+  background-color: #164484;
+}
+#top-section .custom-button .gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+#top-section .custom-button .label {
+  position: relative;
+  top: -1px;
+}
+#top-section .custom-button .transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#top-section .custom-button:hover .transition {
+  width: 14em;
+  height: 14em;
+}
+#top-section .custom-button:active {
+  transform: scale(0.97);
+}
+
+#top-section h2 {
+  margin-bottom: 20px;
+}
+
+.part2 {
+  margin: auto;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  border-radius: 10px;
+  background-color: rgb(24, 82, 168);
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.part1 {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.part1 h2 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.part2:hover .part1 {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cards .red {
+  background-color: #ff9900;
+}
+
+.cards .blue {
+  background-color: #b3ff00;
+}
+
+.cards .green {
+  background-color: #ff0000;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: 0.7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 3em;
+  padding-left: 2.8em;
+  padding-right: 2.8em;
+  padding-bottom: 2.1em;
+  border: 2px dashed #b300ff;
+  border-radius: 15px;
+  background-color: #0051ff;
+  box-shadow: 0 0 0 4px #2f00ff, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.4s ease-in-out;
+}
+
+::placeholder {
+  color: #000000;
+  text-align: center;
+}
+
+.form .heading {
+  padding-left: 0.8em;
+  color: #000000;
+  background-color: transparent;
+  letter-spacing: 0.5em;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 3em;
+  text-shadow: inset -1px -1px 1px #000000;
+}
+
+.form .input {
+  outline: none;
+  padding: 0.5em;
+  border: 1px solid #ff0000;
+  color: #0275b3;
+  width: 14em;
+  height: 3em;
+  border-radius: 10px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.form .btn {
+  align-self: center;
+  margin-top: 2em;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #00f777;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  transition: 0.4s ease-in-out opacity, 0.1s ease-in-out active;
+  padding: 1em;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+}
+
+.form .btn:hover {
+  opacity: 0.8;
+}
+
+.form .btn:active {
+  transform: translateX(0.1em) translateY(0.1em);
+  box-shadow: none;
+}
+
+.container-sep {
+  background-image: url("https://img.freepik.com/foto-gratis/vacaciones-invierno-cabeza-concepto-nochebuena-chica-bonita-pelirroja-sombrero-santa-aparecen-abajo_1258-172090.jpg?w=1380&t=st=1708468965~exp=1708469565~hmac=c90659c45e38fb3d0a7e22a0e713c3322cd502142905781f4df2dc481752f2bd");
+  margin-bottom: 20px;
+  padding: 200px 0;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100px;
+  font-style: normal;
+}
+
+.container-animals {
+  background-image: url("https://img.freepik.com/vector-gratis/ilustracion-mascotas-lindas_53876-112522.jpg?w=1480&t=st=1708469562~exp=1708470162~hmac=4da4951d101f4f236abead0b6ba5e4cc53a2020fd4468ca3524e7a642c917194");
+  padding: 200px 0;
+}
+.container-animals h1 {
+  margin-top: 4rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.container-animals .custom-button {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+.container-animals .custom-button:before, .container-animals .custom-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+.container-animals .custom-button:before {
+  left: -10px;
+  background: #ffffff;
+}
+.container-animals .custom-button:after {
+  right: -10px;
+  background: #717171;
+}
+.container-animals .custom-button:hover::before, .container-animals .custom-button:hover::after {
+  width: 58%;
+}
+.container-animals .custom-button:hover span {
+  color: #430567;
+  transition: 0.3s;
+}
+.container-animals .custom-button span {
+  color: #4042b8;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+.col-md-6 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.col-md-6 h2 {
+  color: #3457e1;
+  font-size: 28px;
+}
+
+.col-md-6 p.lead {
+  color: #141d38;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.navbar {
+  background: #ffffff;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-nav .nav-item .active {
+  border-radius: 6px;
+  background: linear-gradient(145deg, rgb(99, 135, 233), #f5d7b2);
+  box-shadow: 4px 4px 8px #ddc1a0, -4px -4px 8px #0271c5;
+}
+
+.dropdown-menu a:hover {
+  color: #454545;
+}
+
+.nav-item {
+  margin: auto 4px;
+}
+
+a.navbar-brand {
+  color: #454545;
+}
+a.navbar-brand img {
+  border-radius: 50%;
+  width: 60px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+a.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+
+.navbar-toggler-icon {
+  background-color: #454545;
+}
+
+.navbar-nav .nav-link {
+  color: #454545;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #454545;
+}
+
+.container-fot {
+  background-color: #141d38;
+  padding: 100px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.images-container .image-container {
+  margin-bottom: 20px;
+}
+
+.images-container .card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.images-container .card:hover {
+  transform: scale(1.05);
+}
+
+.images-container .card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.images-container .card .card-text {
+  font-family: "DM Serif Display", serif;
+  padding: 15px;
+}
+
+.images-container .card .btn-col-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #1e6ab7;
+  transition: 0.3s;
+  outline: none;
+  border: 1px solid transparent;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.images-container .card .btn-col-3:hover {
+  background-color: #17518b;
+  border: 1px solid #83b7eb;
+  color: #1e6ab7;
+  box-shadow: 1px 2px 6px #2c83dc;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+.container-3 {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container-3 h2 {
+  font-family: "Sixtyfour", sans-serif;
+  color: #343a40;
+}
+
+.container-4 h2 {
+  font-family: "Honk", system-ui;
+  color: black;
+}
+
+#redes img {
+  max-width: 40px;
+  height: auto;
+}
+
+.container-cats {
+  background-image: url("https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 100px 0;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin: 50px auto;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.container-cats h1 {
+  margin-bottom: 20px;
+}
+.container-cats p {
+  margin-bottom: 40px;
+}
+
+.container-baj {
+  background-color: #1e6ab7;
+}
+.container-baj .custom-button {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+.container-baj .custom-button:before, .container-baj .custom-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+.container-baj .custom-button:before {
+  left: -10px;
+  background: #ffffff;
+}
+.container-baj .custom-button:after {
+  right: -10px;
+  background: #717171;
+}
+.container-baj .custom-button:hover::before, .container-baj .custom-button:hover::after {
+  width: 58%;
+}
+.container-baj .custom-button:hover span {
+  color: #430567;
+  transition: 0.3s;
+}
+.container-baj .custom-button span {
+  color: #4042b8;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+.card-new {
+  width: 254px;
+  height: 270px;
+  background: #ff8000;
+  border-radius: 15px;
+  box-shadow: 1px 5px 60px 0px rgba(16, 10, 136, 0.4196078431);
+}
+
+.card-new .card-border-top {
+  width: 60%;
+  height: 3%;
+  background: #000000;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.card-new span {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.card-new img {
+  width: 150px;
+  height: 150px;
+  background: #cf9504;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.card-new button {
+  padding: 8px 25px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  background: #62a195;
+  color: white;
+  font-weight: 600;
+}
+
+.card-new button:hover {
+  background: #000000;
+}
+
+.cats-con {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container-2 h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container-dogs {
+  background-image: url("https://img.freepik.com/foto-gratis/bodegon-composicion-alimentos-animales-domesticos_23-2148982402.jpg?w=740&t=st=1708527931~exp=1708528531~hmac=f1a6e583e42e3fbb8560837fe8592ac7fd2490404d2dac2df509a32b31e5a9b9");
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 100px 0;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin: 50px auto;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 15px;
+  }
+  .images-container {
+    flex-direction: column;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-toggler {
+    margin-right: 0;
+  }
+  .container-2 {
+    padding: 20px;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
+  .footer {
+    padding: 15px 0;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .col-md-6,
+  .col-md-6 img {
+    width: 100%;
+    max-width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
